@@ -17,14 +17,14 @@ export default function Home() {
         <div className="flex justify-between items-center w-[900px]">
           <Link
             href="/"
-            className="flex items-center gap-4 font-bold font-[arial] text-xl"
+            className="flex items-center gap-4 font-bold font-[arial] text-md sm:text-xl"
           >
             <Image
               src="/custom-logo.svg"
               width="200"
               height="200"
               alt="logo"
-              className="w-[42px]"
+              className="w-[30px] sm:w-[42px]"
             />
             Sameh Naal
           </Link>
@@ -44,19 +44,20 @@ export default function Home() {
         </div>
       </nav>
 
-      <h1 className="font-bold text-5xl sm:text-6xl mb-8 flex flex-col text-center gap-2">
+      <h1 className="font-bold text-4xl sm:text-6xl mb-8 flex flex-col text-center text-balance">
         <span>Sameh Naal.</span>
 
-        <span>Graphic Designer.</span>
+        <span>Industrial Graphic Designer.</span>
       </h1>
 
       <span className="text-slate-400 text-balance lg:w-[700px] text-center mb-20 text-sm sm:text-md">
-        25+ years of experience with designing 3D models for plastic molds, sand casted parts, and more.
-        Proven real world experience with numerous satisfied clients.
+        25+ years of experience with designing 3D models for plastic molds, sand
+        casted parts, and more. Proven real world experience with numerous
+        satisfied clients.
       </span>
 
       <h2
-        className="text-rose-500 mb-10 text-sm font-medium scroll-mt-24"
+        className="text-rose-500 mb-10 text-sm font-medium scroll-mt-24 text-center"
         id="my-work"
       >
         MY WORK
@@ -97,7 +98,7 @@ export default function Home() {
       </div>
 
       <h2
-        className="text-rose-500 mb-10 text-sm font-medium scroll-mt-24"
+        className="text-rose-500 mb-10 text-sm font-medium scroll-mt-24 text-center"
         id="contact"
       >
         CONTACT
