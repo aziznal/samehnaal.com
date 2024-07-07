@@ -79,7 +79,10 @@ export function CarouselDialog({
         >
           <CarouselContent className="w-full">
             {items.map((item) => (
-              <CarouselItem key={item}>
+              <CarouselItem
+                key={item}
+                className="flex items-center justify-center"
+              >
                 <>
                   {getFileExtension(item) === "png" ? (
                     <Image
@@ -87,14 +90,14 @@ export function CarouselDialog({
                       width={1000}
                       height={1000}
                       alt={`Examples of my work - ${item}`}
-                      className={cn("object-contain w-full")}
+                      className={cn("object-contain w-full h-[70vh]")}
                     />
                   ) : (
                     <video
                       width="640"
                       height="360"
                       controls
-                      className="h-[50vh]"
+                      className="h-[70vh]"
                     >
                       <source src={item} type="video/mp4" />
                       Your browser does not support the video tag.
