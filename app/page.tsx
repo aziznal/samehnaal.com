@@ -115,17 +115,17 @@ export default function Home() {
         CONTACT
       </h2>
 
-      <div className="flex gap-4 items-center mb-64">
+      <div className="flex flex-wrap justify-center gap-4 items-center mb-64 px-4">
         <Link
-          className="px-3 py-2 hover:bg-slate-800 transition-colors border border-blue-800 rounded-full text-xs sm:text-sm flex items-center gap-2"
+          className="px-3 py-2 hover:bg-slate-800 transition-colors border border-blue-800 rounded-full text-xs sm:text-sm flex items-center gap-2 text-nowrap"
           href="mailto:samehn2000@gmail.com"
         >
           <LucideMail />
-          Email me
+          samehn2000@gmail.com
         </Link>
 
         <Link
-          className="px-3 py-2 hover:bg-slate-800 transition-colors border border-purple-900 rounded-full text-xs sm:text-sm flex items-center gap-2"
+          className="px-3 py-2 hover:bg-slate-800 transition-colors border border-purple-900 rounded-full text-xs sm:text-sm flex items-center gap-2 text-nowrap"
           href="/cv.pdf"
           target="_blank"
         >
@@ -134,7 +134,7 @@ export default function Home() {
         </Link>
 
         <Link
-          className="px-3 py-2 hover:bg-slate-800 transition-colors border border-emerald-900 rounded-full text-xs sm:text-sm flex items-center gap-2"
+          className="px-3 py-2 hover:bg-slate-800 transition-colors border border-emerald-900 rounded-full text-xs sm:text-sm flex items-center gap-2 text-nowrap"
           href="tel:+905318309103"
           target="_blank"
         >
