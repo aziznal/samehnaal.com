@@ -1,3 +1,4 @@
+import { CategoryCard } from "@/components/CategoryCard";
 import { LucideMail, LucideScrollText } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,7 +7,7 @@ import { ReactNode } from "react";
 export default function Home() {
   return (
     <div
-      className="flex flex-col items-center min-h-dvh h-[500vh] pb-80 scroll-mt-24"
+      className="flex flex-col items-center min-h-dvh pb-80 scroll-mt-24"
       id="home"
       style={{
         background: "url('/main.svg') top center / cover repeat",
@@ -14,7 +15,10 @@ export default function Home() {
     >
       <nav className="flex justify-center items-center py-3 sticky top-0 w-full border-b border-slate-800 mb-[16vh] backdrop-blur px-4">
         <div className="flex justify-between items-center w-[900px]">
-          <Link href="/" className="flex items-center gap-4 font-bold font-[arial] text-xl">
+          <Link
+            href="/"
+            className="flex items-center gap-4 font-bold font-[arial] text-xl"
+          >
             <Image
               src="/custom-logo.svg"
               width="200"
@@ -46,7 +50,7 @@ export default function Home() {
         <span>Graphic Designer.</span>
       </h1>
 
-      <span className="text-slate-400 text-balance lg:w-[700px] text-center mb-12 text-sm sm:text-md">
+      <span className="text-slate-400 text-balance lg:w-[700px] text-center mb-20 text-sm sm:text-md">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur maiores
         sapiente porro amet a molestiae dolores, iure totam impedit quasi.
       </span>
@@ -58,35 +62,37 @@ export default function Home() {
         MY WORK
       </h2>
 
-      <div className="flex items-center flex-wrap lg:w-[900px] gap-6 justify-center mb-16">
+      <div className="flex items-center flex-wrap lg:w-[900px] gap-6 justify-center mb-24">
         <CategoryCard
-          imageSrc=""
-          title="Lorem"
-          description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, voluptatem."
+          thumbnailSrc="/portfolio/general/001.png"
+          images={[
+            "/portfolio/general/001.png",
+            "/portfolio/general/002.png",
+            "/portfolio/general/003.png",
+            "/portfolio/general/004.png",
+            "/portfolio/general/005.png",
+            "/portfolio/general/006.png",
+            "/portfolio/general/007.png",
+            "/portfolio/general/008.png",
+            "/portfolio/general/009.png",
+          ]}
+          thumbnailAlignment="object-left"
+          title="General"
+          description="A general overview of the type of work that I do, including complex designs and molds."
         />
 
         <CategoryCard
-          imageSrc=""
-          title="Lorem"
-          description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, voluptatem."
+          thumbnailSrc="/portfolio/plastic-injection/Iveco filter/filter cover.png"
+          images={["/portfolio/plastic-injection/"]}
+          title="Plastic Injection"
+          description="Previews of Plastic injection molds where I both make the 3d models as well as design the mechanical motions of the mold"
         />
 
         <CategoryCard
-          imageSrc=""
-          title="Lorem"
-          description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, voluptatem."
-        />
-
-        <CategoryCard
-          imageSrc=""
-          title="Lorem"
-          description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, voluptatem."
-        />
-
-        <CategoryCard
-          imageSrc=""
-          title="Lorem"
-          description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, voluptatem."
+          thumbnailSrc="/portfolio/sand-casting/From STL to 3D Model4-1.png"
+          images={[""]}
+          title="Sand Casting"
+          description="Real world examples that I've designed of highly complex sand casted parts with many challenging aspects"
         />
       </div>
 
@@ -99,7 +105,7 @@ export default function Home() {
 
       <div className="flex gap-4 items-center">
         <Link
-          className="px-3 py-2 hover:bg-slate-800 transition-colors border border-slate-800 rounded-full text-xs sm:text-sm flex items-center gap-2"
+          className="px-3 py-2 hover:bg-slate-800 transition-colors border border-blue-800 rounded-full text-xs sm:text-sm flex items-center gap-2"
           href="mailto:samehn2000@gmail.com"
         >
           <LucideMail />
@@ -107,7 +113,7 @@ export default function Home() {
         </Link>
 
         <Link
-          className="px-3 py-2 hover:bg-slate-800 transition-colors border border-slate-800 rounded-full text-xs sm:text-sm flex items-center gap-2"
+          className="px-3 py-2 hover:bg-slate-800 transition-colors border border-purple-900 rounded-full text-xs sm:text-sm flex items-center gap-2"
           href="/cv.pdf"
           target="_blank"
         >
@@ -129,28 +135,5 @@ function NavLink({ href, children }: NavLinkProps) {
     <Link href={href} className="hover:underline text-xs sm:text-sm">
       {children}
     </Link>
-  );
-}
-
-type CategoryCardProps = {
-  imageSrc: string;
-  title: string;
-  description: string;
-};
-
-function CategoryCard({ imageSrc, title, description }: CategoryCardProps) {
-  return (
-    <div className="border border-slate-800 h-[400px] w-[275px] p-1.5 rounded-xl transition-all hover:bg-slate-800 cursor-pointer">
-      {/* TODO: replace with an image */}
-      {/* <Image src={imageSrc} width={800} height={800} alt="imageSrc" /> */}
-
-      <div className="w-full bg-slate-600 h-[275px] rounded-lg mb-3" />
-
-      <div className="px-2">
-        <h3 className="font-medium mb-1">{title}</h3>
-
-        <span className="text-slate-400 text-sm">{description}</span>
-      </div>
-    </div>
   );
 }
