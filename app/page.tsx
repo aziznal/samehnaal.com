@@ -7,7 +7,7 @@ import { ReactNode } from "react";
 export default function Home() {
   return (
     <div
-      className="flex flex-col items-center min-h-dvh pb-80 scroll-mt-24"
+      className="flex flex-col items-center min-h-dvh scroll-mt-24"
       id="home"
       style={{
         background: "url('/main.svg') top center / cover repeat",
@@ -84,14 +84,25 @@ export default function Home() {
 
         <CategoryCard
           thumbnailSrc="/portfolio/plastic-injection/Iveco filter/filter cover.png"
-          images={["/portfolio/plastic-injection/"]}
+          images={[
+            "/portfolio/plastic-injection/Elbow/Elbow mold.png",
+            "/portfolio/plastic-injection/Elbow/Elbow.png",
+            "/portfolio/plastic-injection/Iveco filter/From STL to 3D Model.png",
+            "/portfolio/plastic-injection/Iveco filter/STL.png",
+            "/portfolio/plastic-injection/Iveco filter/filter cover.png",
+            "/portfolio/plastic-injection/Iveco filter/Iveco.mp4",
+          ]}
           title="Plastic Injection"
           description="Previews of Plastic injection molds where I both make the 3d models as well as design the mechanical motions of the mold"
         />
 
         <CategoryCard
           thumbnailSrc="/portfolio/sand-casting/From STL to 3D Model4-1.png"
-          images={[""]}
+          images={[
+            "/portfolio/sand-casting/From STL to 3D Model4-1.png",
+            "/portfolio/sand-casting/From STL to 3D Model5.png",
+            "/portfolio/sand-casting/STL5.png",
+          ]}
           title="Sand Casting"
           description="Real world examples that I've designed of highly complex sand casted parts with many challenging aspects"
         />
@@ -104,7 +115,7 @@ export default function Home() {
         CONTACT
       </h2>
 
-      <div className="flex gap-4 items-center">
+      <div className="flex gap-4 items-center mb-64">
         <Link
           className="px-3 py-2 hover:bg-slate-800 transition-colors border border-blue-800 rounded-full text-xs sm:text-sm flex items-center gap-2"
           href="mailto:samehn2000@gmail.com"
@@ -122,6 +133,21 @@ export default function Home() {
           See my CV
         </Link>
       </div>
+
+      <footer className="flex flex-col gap-4 items-center justify-center pb-8">
+        <span className="text-sm text-slate-600">samehnaal.com - 2024</span>
+
+        <span className="text-xs opacity-30">
+          made by{" "}
+          <Link
+            href="https://aziznal.com"
+            className="text-rose-600"
+            target="_blank"
+          >
+            aziznal
+          </Link>
+        </span>
+      </footer>
     </div>
   );
 }

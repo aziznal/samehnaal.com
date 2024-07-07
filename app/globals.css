@@ -35,35 +35,35 @@
     --radius: 0.5rem;
   }
 
-  /* .dark { */
-  /*   --background: 240 10% 3.9%; */
-  /*   --foreground: 0 0% 98%; */
-  /**/
-  /*   --card: 240 10% 3.9%; */
-  /*   --card-foreground: 0 0% 98%; */
-  /**/
-  /*   --popover: 240 10% 3.9%; */
-  /*   --popover-foreground: 0 0% 98%; */
-  /**/
-  /*   --primary: 0 0% 98%; */
-  /*   --primary-foreground: 240 5.9% 10%; */
-  /**/
-  /*   --secondary: 240 3.7% 15.9%; */
-  /*   --secondary-foreground: 0 0% 98%; */
-  /**/
-  /*   --muted: 240 3.7% 15.9%; */
-  /*   --muted-foreground: 240 5% 64.9%; */
-  /**/
-  /*   --accent: 240 3.7% 15.9%; */
-  /*   --accent-foreground: 0 0% 98%; */
-  /**/
-  /*   --destructive: 0 62.8% 30.6%; */
-  /*   --destructive-foreground: 0 0% 98%; */
-  /**/
-  /*   --border: 240 3.7% 15.9%; */
-  /*   --input: 240 3.7% 15.9%; */
-  /*   --ring: 240 4.9% 83.9%; */
-  /* } */
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
 }
 
 @layer base {
@@ -74,4 +74,28 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Scrollbar container */
+::-webkit-scrollbar {
+  width: 8px; /* for vertical scrollbars */
+  height: 8px; /* for horizontal scrollbars */
+  background-color: #f5f5f5; /* light grey background */
+}
+
+/* Scrollbar handle */
+::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1; /* dark grey */
+  border-radius: 4px; /* rounded corners for the scrollbar handle */
+}
+
+/* Scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: #f5f5f5; /* light grey, same as scrollbar container */
+  border-radius: 4px; /* rounded corners for the track */
+}
+
+/* Optional: dynamic effect on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8a8a8; /* slightly darker grey when hovered */
 }
