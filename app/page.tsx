@@ -51,8 +51,8 @@ export default function Home() {
       </h1>
 
       <span className="text-slate-400 text-balance lg:w-[700px] text-center mb-20 text-sm sm:text-md">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur maiores
-        sapiente porro amet a molestiae dolores, iure totam impedit quasi.
+        25+ years of experience with designing 3D models for plastic molds, sand casted parts, and more.
+        Proven real world experience with numerous satisfied clients.
       </span>
 
       <h2
