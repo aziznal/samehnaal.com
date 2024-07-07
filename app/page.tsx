@@ -1,113 +1,156 @@
+import { LucideMail, LucideScrollText } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+import { ReactNode } from "react";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
+    <div
+      className="flex flex-col items-center min-h-dvh h-[500vh] pb-80 scroll-mt-24"
+      id="home"
+      style={{
+        background: "url('/main.svg') top center / cover repeat",
+      }}
+    >
+      <nav className="flex justify-center items-center py-3 sticky top-0 w-full border-b border-slate-800 mb-[16vh] backdrop-blur px-4">
+        <div className="flex justify-between items-center w-[900px]">
+          <Link href="/" className="flex items-center gap-4 font-bold font-[arial] text-xl">
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+              src="/custom-logo.svg"
+              width="200"
+              height="200"
+              alt="logo"
+              className="w-[42px]"
             />
-          </a>
-        </div>
-      </div>
+            Sameh Naal
+          </Link>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          <div className="flex gap-4 sm:gap-8 items-center">
+            <NavLink href="#home">Home</NavLink>
+
+            <NavLink href="#my-work">My Work</NavLink>
+
+            <Link
+              className="px-3 py-2 hover:bg-slate-800 transition-colors border border-slate-800 rounded-full text-xs sm:text-sm"
+              href="#contact"
+            >
+              Contact
+            </Link>
+          </div>
+        </div>
+      </nav>
+
+      <h1 className="font-bold text-5xl sm:text-6xl mb-8 flex flex-col text-center gap-2">
+        <span>Sameh Naal.</span>
+
+        <span>Graphic Designer.</span>
+      </h1>
+
+      <span className="text-slate-400 text-balance lg:w-[700px] text-center mb-12 text-sm sm:text-md">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur maiores
+        sapiente porro amet a molestiae dolores, iure totam impedit quasi.
+      </span>
+
+      <h2
+        className="text-rose-500 mb-10 text-sm font-medium scroll-mt-24"
+        id="my-work"
+      >
+        MY WORK
+      </h2>
+
+      <div className="flex items-center flex-wrap lg:w-[900px] gap-6 justify-center mb-16">
+        <CategoryCard
+          imageSrc=""
+          title="Lorem"
+          description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, voluptatem."
+        />
+
+        <CategoryCard
+          imageSrc=""
+          title="Lorem"
+          description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, voluptatem."
+        />
+
+        <CategoryCard
+          imageSrc=""
+          title="Lorem"
+          description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, voluptatem."
+        />
+
+        <CategoryCard
+          imageSrc=""
+          title="Lorem"
+          description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, voluptatem."
+        />
+
+        <CategoryCard
+          imageSrc=""
+          title="Lorem"
+          description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, voluptatem."
         />
       </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <h2
+        className="text-rose-500 mb-10 text-sm font-medium scroll-mt-24"
+        id="contact"
+      >
+        CONTACT
+      </h2>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+      <div className="flex gap-4 items-center">
+        <Link
+          className="px-3 py-2 hover:bg-slate-800 transition-colors border border-slate-800 rounded-full text-xs sm:text-sm flex items-center gap-2"
+          href="mailto:samehn2000@gmail.com"
         >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+          <LucideMail />
+          Email me
+        </Link>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+        <Link
+          className="px-3 py-2 hover:bg-slate-800 transition-colors border border-slate-800 rounded-full text-xs sm:text-sm flex items-center gap-2"
+          href="/cv.pdf"
           target="_blank"
-          rel="noopener noreferrer"
         >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+          <LucideScrollText />
+          See my CV
+        </Link>
       </div>
-    </main>
+    </div>
+  );
+}
+
+type NavLinkProps = {
+  href: string;
+  children: ReactNode;
+};
+
+function NavLink({ href, children }: NavLinkProps) {
+  return (
+    <Link href={href} className="hover:underline text-xs sm:text-sm">
+      {children}
+    </Link>
+  );
+}
+
+type CategoryCardProps = {
+  imageSrc: string;
+  title: string;
+  description: string;
+};
+
+function CategoryCard({ imageSrc, title, description }: CategoryCardProps) {
+  return (
+    <div className="border border-slate-800 h-[400px] w-[275px] p-1.5 rounded-xl transition-all hover:bg-slate-800 cursor-pointer">
+      {/* TODO: replace with an image */}
+      {/* <Image src={imageSrc} width={800} height={800} alt="imageSrc" /> */}
+
+      <div className="w-full bg-slate-600 h-[275px] rounded-lg mb-3" />
+
+      <div className="px-2">
+        <h3 className="font-medium mb-1">{title}</h3>
+
+        <span className="text-slate-400 text-sm">{description}</span>
+      </div>
+    </div>
   );
 }
