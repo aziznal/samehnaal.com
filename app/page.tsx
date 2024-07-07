@@ -1,5 +1,5 @@
 import { CategoryCard } from "@/components/CategoryCard";
-import { LucideMail, LucideScrollText } from "lucide-react";
+import { LucideMail, LucidePhoneCall, LucideScrollText } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -131,6 +131,15 @@ export default function Home() {
         >
           <LucideScrollText />
           See my CV
+        </Link>
+
+        <Link
+          className="px-3 py-2 hover:bg-slate-800 transition-colors border border-emerald-900 rounded-full text-xs sm:text-sm flex items-center gap-2"
+          href="tel:+905318309103"
+          target="_blank"
+        >
+          <LucidePhoneCall />
+          +90 531 830 91 03
         </Link>
       </div>
 
