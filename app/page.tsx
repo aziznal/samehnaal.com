@@ -13,7 +13,7 @@ export default function Home() {
         background: "url('/main.svg') top center / cover repeat",
       }}
     >
-      <nav className="flex justify-center items-center py-3 sticky top-0 w-full border-b border-slate-800 mb-[16vh] backdrop-blur px-4">
+      <nav className="flex justify-center items-center py-3 sticky top-0 w-full mb-[16vh] backdrop-blur bg-opacity-50 bg-slate-900 px-4">
         <div className="flex justify-between items-center w-[900px]">
           <Link
             href="/"
