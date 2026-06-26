@@ -135,16 +135,16 @@ export default function Home() {
 
         <Link
           className="px-3 py-2 hover:bg-slate-800 transition-colors border border-emerald-900 rounded-full text-xs sm:text-sm flex items-center gap-2 text-nowrap"
-          href="tel:+905318309103"
+          href="tel:+905385896275"
           target="_blank"
         >
           <LucidePhoneCall />
-          +90 531 830 91 03
+          +90 538 589 62 75
         </Link>
       </div>
 
       <footer className="flex flex-col gap-4 items-center justify-center pb-8">
-        <span className="text-sm text-slate-600">samehnaal.com - 2024</span>
+        <span className="text-sm text-slate-600">samehnaal.com - 2026</span>
 
         <span className="text-xs opacity-30">
           made by{" "}
